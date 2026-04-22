@@ -1,7 +1,8 @@
+
 {% extends "forum/base.html" %}
 
 {% block content %}
-<form method="post">
+<form name = "form" method="post">
     {% csrf_token %}
     <p><label for="titulo">Escreva sua pergunta:</label><br>
         <input type="text" name="titulo" id="titulo" size="50" maxlength="200">
@@ -13,7 +14,7 @@
             <textarea rows="6" cols="50" id="tentativa" name="tentativa"></textarea>
     </p>
 
-    <input type="submit" name="dopost" value="Salvar" />
+    <input type="submit" name="botao_inserir_pergunta" value="Salvar" />
 
 </form>
 {% endblock %}
