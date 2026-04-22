@@ -1,3 +1,4 @@
+
 {% extends "forum/base.html" %}
 
 {% block content %}
@@ -21,7 +22,7 @@
 {% endfor %}
 </ul>
 <a href="{% url 'forum:inserir_resposta' pergunta.id %}">
-    <button>Nova resposta</button>
+    <button name="nova_resposta">Nova resposta</button>
 </a>
 {% endblock %}
 {% endblock %}

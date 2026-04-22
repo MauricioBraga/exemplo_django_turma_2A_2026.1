@@ -80,7 +80,7 @@ class InserirRespostaView(View):
             usuario = request.user.username
         else:
             usuario = 'anônimo'
-        texto = request.POST.get('texto')
+        texto = request.POST.get('texto_resposta')
         data_criacao = timezone.now()
         
         pergunta.resposta_set.create(texto=texto, data_criacao=data_criacao, usuario=usuario)
