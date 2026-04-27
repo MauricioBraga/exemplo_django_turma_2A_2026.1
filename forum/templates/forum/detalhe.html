@@ -15,7 +15,7 @@
         {{ resposta.texto }} - <b>{{ resposta.votos }} votos</b>
         <form action="{% url 'forum:voto' resposta.id %}" method="post">
             {% csrf_token %}
-            <input type="submit" value="Votar">
+            <input type="submit" id="votar" value="Votar">
         </form>
     </li>
 
